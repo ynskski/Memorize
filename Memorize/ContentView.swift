@@ -21,7 +21,7 @@ struct ContentView: View {
         }
             .padding()
             .foregroundColor(Color.orange)
-            .font(Font.largeTitle)
+            .font(viewModel.cards.count > 9 ? .caption : .largeTitle)
     }
 }
 
@@ -31,11 +31,17 @@ struct CardView: View {
     var body: some View {
         ZStack {
             if card.isFaceUp {
-                RoundedRectangle(cornerRadius: 10.0).fill(Color.white)
-                RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 3)
+                RoundedRectangle(cornerRadius: 10.0)
+                    .fill(Color.white)
+                    .aspectRatio(1/1.5, contentMode: .fit)
+                RoundedRectangle(cornerRadius: 10.0)
+                    .stroke(lineWidth: 3)
+                    .aspectRatio(1/1.5, contentMode: .fit)
                 Text(card.content)
             } else {
-                RoundedRectangle(cornerRadius: 10.0).fill()
+                RoundedRectangle(cornerRadius: 10.0)
+                    .fill()
+                    .aspectRatio(1/1.5, contentMode: .fit)
             }
         }
     }
