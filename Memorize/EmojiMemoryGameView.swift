@@ -13,8 +13,6 @@ struct EmojiMemoryGameView: View {
     
     var body: some View {
         VStack {
-            Text(viewModel.theme.name)
-            
             Grid(viewModel.cards) { card in
                 CardView(card: card).onTapGesture {
                     viewModel.choose(card: card)
@@ -23,6 +21,16 @@ struct EmojiMemoryGameView: View {
             }
                 .padding()
                 .foregroundColor(viewModel.theme.color)
+            
+            HStack {
+                Text(viewModel.theme.name)
+                
+                Button {
+                    viewModel.resetGame()
+                } label: {
+                    Text("New Game")
+                }
+            }
         }
     }
 }
