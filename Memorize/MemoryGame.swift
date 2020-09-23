@@ -12,6 +12,7 @@ import SwiftUI
 struct MemoryGame<CardContent> where CardContent: Equatable {
     var cards: [Card]
     var theme: CardTheme
+    var score: Int
     
     var indexOfTheOneAndOnlyFaceUpCard: Int? {
         get {
@@ -32,6 +33,9 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
                 if cards[chosenIndex].content == cards[potentialMatchIndex].content {
                     cards[chosenIndex].isMatched = true
                     cards[potentialMatchIndex].isMatched = true
+                    score += 2
+                } else {
+                    score -= 1
                 }
                 self.cards[chosenIndex].isFaceUp = true
             } else {
@@ -41,6 +45,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
     }
     
     init(theme: CardTheme, cardContentFactory: (Int) -> CardContent) {
+        self.score = 0
         self.theme = theme
         
         cards = [Card]()
