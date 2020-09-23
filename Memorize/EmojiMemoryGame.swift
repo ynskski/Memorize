@@ -12,10 +12,19 @@ class EmojiMemoryGame: ObservableObject {
     @Published private var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
     
     static func createMemoryGame() -> MemoryGame<String> {
-        let emojis = ["👻", "🎃", "🕷", "🍭", "🕯"]
+        let themes = [
+            MemoryGame.CardTheme(name: "Halloween", content: ["👻", "🎃", "🕷", "🍭", "🕯"], color: .orange),
+            MemoryGame.CardTheme(name: "Winter", content: ["🎄", "☃️", "⛄️", "🍰", "❄️"], color: .blue),
+            MemoryGame.CardTheme(name: "Animal", content: ["🐶", "🐱", "🐰", "🦊", "🐼"], color: .green),
+            MemoryGame.CardTheme(name: "Faces", content: ["😀", "😂", "😇", "😉", "🤔"], color: .red),
+            MemoryGame.CardTheme(name: "Fruits", content: ["🍎", "🍊", "🍋", "🍓", "🍉"], color: .purple),
+            MemoryGame.CardTheme(name: "Food", content: ["🍔", "🌮", "🍜", "🍣", "🍙"], color: .pink),
+        ]
         
-        return MemoryGame<String>(numberOfPairsOfCards: Int.random(in: 2...emojis.count)) { pairIndex in
-            return emojis[pairIndex]
+        let theme = themes.randomElement()!
+        
+        return MemoryGame<String>(theme: theme) { pairIndex in
+            return theme.content[pairIndex]
         }
     }
     
@@ -23,6 +32,10 @@ class EmojiMemoryGame: ObservableObject {
     
     var cards: [MemoryGame<String>.Card] {
         return model.cards
+    }
+    
+    var theme: MemoryGame<String>.CardTheme {
+        return model.theme
     }
     
     // MARK: - Intent(s)
