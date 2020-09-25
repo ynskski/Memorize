@@ -73,7 +73,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         var color: Color
         
         var numberOfPairsOfCards: Int {
-            return Int.random(in: 2...content.count)
+            return [3, 4, 6].randomElement()!
         }
     }
 }
