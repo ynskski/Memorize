@@ -49,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		023DB81E252485960057A364 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				02A04274251A4566003A3ECE /* Array+Only.swift */,
+				0288CFA3251A3608002D5ED5 /* Array+Identifiable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		02ADA78F2513942E0003CF63 = {
 			isa = PBXGroup;
 			children = (
@@ -68,14 +77,13 @@
 		02ADA79A2513942E0003CF63 /* Memorize */ = {
 			isa = PBXGroup;
 			children = (
+				023DB81E252485960057A364 /* Extensions */,
 				02ADA79B2513942E0003CF63 /* AppDelegate.swift */,
 				02ADA79D2513942E0003CF63 /* SceneDelegate.swift */,
 				02ADA79F2513942E0003CF63 /* EmojiMemoryGameView.swift */,
 				0288CF9D251A2C89002D5ED5 /* Grid.swift */,
-				0288CFA3251A3608002D5ED5 /* Array+Identifiable.swift */,
 				0288CFA0251A327C002D5ED5 /* GridLayout.swift */,
 				02ADA7AF2513ACA70003CF63 /* MemoryGame.swift */,
-				02A04274251A4566003A3ECE /* Array+Only.swift */,
 				02ADA7B12513AED00003CF63 /* EmojiMemoryGame.swift */,
 				02ADA7A1251394350003CF63 /* Assets.xcassets */,
 				02ADA7A6251394350003CF63 /* LaunchScreen.storyboard */,
