@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020DAA772583BB9700286FB8 /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020DAA762583BB9700286FB8 /* UIColor+RGB.swift */; };
 		023A8A1125248B100013AAF1 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A8A1025248B100013AAF1 /* Pie.swift */; };
 		023A8A18252492AD0013AAF1 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A8A17252492AD0013AAF1 /* Cardify.swift */; };
 		0288CF9E251A2C89002D5ED5 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288CF9D251A2C89002D5ED5 /* Grid.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		020DAA762583BB9700286FB8 /* UIColor+RGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
 		023A8A1025248B100013AAF1 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 		023A8A17252492AD0013AAF1 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 		0288CF9D251A2C89002D5ED5 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			children = (
 				02A04274251A4566003A3ECE /* Array+Only.swift */,
 				0288CFA3251A3608002D5ED5 /* Array+Identifiable.swift */,
+				020DAA762583BB9700286FB8 /* UIColor+RGB.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				02ADA7B02513ACA70003CF63 /* MemoryGame.swift in Sources */,
 				02A04275251A4566003A3ECE /* Array+Only.swift in Sources */,
 				02ADA7A02513942E0003CF63 /* EmojiMemoryGameView.swift in Sources */,
+				020DAA772583BB9700286FB8 /* UIColor+RGB.swift in Sources */,
 				02ADA7B22513AED00003CF63 /* EmojiMemoryGame.swift in Sources */,
 				0288CFA4251A3608002D5ED5 /* Array+Identifiable.swift in Sources */,
 				0288CFA1251A327C002D5ED5 /* GridLayout.swift in Sources */,
