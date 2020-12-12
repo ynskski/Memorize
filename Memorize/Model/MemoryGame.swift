@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUI
 
-struct MemoryGame<CardContent> where CardContent: Equatable {
+struct MemoryGame<CardContent> where CardContent: Equatable & Codable {
     private(set) var cards: [Card]
     private(set) var theme: CardTheme
     private(set) var score: Int
@@ -49,6 +49,11 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         self.theme = theme
         
         cards = [Card]()
+        
+        guard let jsonTheme = try? JSONEncoder().encode(theme) else {
+            return
+        }
+        print(String(data: jsonTheme, encoding: .utf8))
         
         for pairIndex in 0..<theme.numberOfPairsOfCards {
             let content = cardContentFactory(pairIndex)
@@ -143,10 +148,10 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         }
     }
     
-    struct CardTheme {
+    struct CardTheme: Codable {
         var name: String
         var content: [CardContent]
-        var color: Color
+        var color: UIColor.RGB
         
         var numberOfPairsOfCards: Int {
             return [3, 4, 6].randomElement()!

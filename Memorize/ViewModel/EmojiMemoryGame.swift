@@ -13,12 +13,12 @@ class EmojiMemoryGame: ObservableObject {
     
     private static func createMemoryGame() -> MemoryGame<String> {
         let themes = [
-            MemoryGame.CardTheme(name: "Halloween", content: ["👻", "🎃", "🕷", "🍭", "🕯", "🍬"], color: .orange),
-            MemoryGame.CardTheme(name: "Winter", content: ["🎄", "☃️", "⛄️", "🍰", "❄️", "⛷"], color: .blue),
-            MemoryGame.CardTheme(name: "Animal", content: ["🐶", "🐱", "🐰", "🦊", "🐼", "🐯"], color: .green),
-            MemoryGame.CardTheme(name: "Faces", content: ["😀", "😂", "😇", "😉", "🤔", "🥺"], color: .red),
-            MemoryGame.CardTheme(name: "Fruits", content: ["🍎", "🍊", "🍋", "🍓", "🍉", "🍒"], color: .purple),
-            MemoryGame.CardTheme(name: "Food", content: ["🍔", "🌮", "🍜", "🍣", "🍙", "🍮"], color: .pink),
+            MemoryGame.CardTheme(name: "Halloween", content: ["👻", "🎃", "🕷", "🍭", "🕯", "🍬"], color: UIColor.RGB(red: 255/255, green: 149/255, blue: 0/255, alpha: 1)),
+            MemoryGame.CardTheme(name: "Winter", content: ["🎄", "☃️", "⛄️", "🍰", "❄️", "⛷"], color: UIColor.RGB(red: 90/255, green: 200/255, blue: 250/255, alpha: 1)),
+            MemoryGame.CardTheme(name: "Animal", content: ["🐶", "🐱", "🐰", "🦊", "🐼", "🐯"], color: UIColor.RGB(red: 52/255, green: 199/255, blue: 89/255, alpha: 1)),
+            MemoryGame.CardTheme(name: "Faces", content: ["😀", "😂", "😇", "😉", "🤔", "🥺"], color: UIColor.RGB(red: 255/255, green: 59/255, blue: 48/255, alpha: 1)),
+            MemoryGame.CardTheme(name: "Fruits", content: ["🍎", "🍊", "🍋", "🍓", "🍉", "🍒"], color: UIColor.RGB(red: 175/255, green: 82/255, blue: 222/255, alpha: 1)),
+            MemoryGame.CardTheme(name: "Food", content: ["🍔", "🌮", "🍜", "🍣", "🍙", "🍮"], color: UIColor.RGB(red: 255/255, green: 45/255, blue: 85/255, alpha: 1)),
         ]
         
         let theme = themes.randomElement()!

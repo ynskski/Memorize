@@ -25,7 +25,7 @@ struct EmojiMemoryGameView: View {
                     .padding(5)
                 }
                     .padding([.leading, .trailing], 10)
-                    .foregroundColor(viewModel.theme.color)
+                    .foregroundColor(Color(viewModel.theme.color))
                     .edgesIgnoringSafeArea(.top)
             }
             .navigationBarTitle(Text(viewModel.theme.name))

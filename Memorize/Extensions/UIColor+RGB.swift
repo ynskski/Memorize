@@ -10,6 +10,12 @@ import Foundation
 import SwiftUI
 import UIKit
 
+extension Color {
+    init(_ rgb: UIColor.RGB) {
+        self.init(UIColor(rgb))
+    }
+}
+
 extension UIColor {
     struct RGB: Hashable, Codable {
         var red: CGFloat
